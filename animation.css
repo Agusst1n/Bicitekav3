@@ -440,7 +440,51 @@ img{
    background-color:white;
   }
 
+  .card .colores9{
+    margin-top: 30px; /*ESTABA EN 40PX*/
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
+  .card .colores9 span{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color:white;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .card .colores9 span:nth-child(2){
+   background-color:black;
+  }
+  .card .colores9 span:nth-child(3){
+   background-color:brown;
+  }
+
+  .card .colores10{
+    margin-top: 30px; /*ESTABA EN 40PX*/
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .card .colores10 span{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color:black;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .card .colores10 span:nth-child(2){
+   background-color:rgb(0, 217, 255);
+  }
+  .card .colores10 span:nth-child(3){
+   background-color:rgb(223, 48, 193);
+  }
   .card .rodados-contenedor{
     display: flex;
     width: 100%;

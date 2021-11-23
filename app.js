@@ -7,12 +7,14 @@ const imagenMostrada5 = document.querySelector(".imagenMostradaBici5")
 const imagenMostrada6 = document.querySelector(".imagenMostradaBici6")
 const imagenMostrada7 = document.querySelector(".imagenMostradaCasco")
 const imagenMostrada8 = document.querySelector(".imagenMostradaCasco2")
+const imagenMostrada9 = document.querySelector(".imagenMostradaAsiento")
+const imagenMostrada10 = document.querySelector(".imagenMostradaCandado")
 const colores = document.querySelectorAll(".coloresJs");
 const rodados = document.querySelectorAll(".rodado")
 const cards = document.querySelectorAll(".card")
 const modalCarrito = document.querySelector(".modalCarrito");
 const cancelarModal = document.querySelector(".botonCancelarModal")
-const precioProductos=document.querySelector("#precioProductos")
+const precioProductos = document.querySelector("#precioProductos")
 let id;
 let rodadoSelecionado;
 var totalPago = 0;
@@ -30,16 +32,16 @@ var pagar;
 var cuenta1;
 var vuelto;
 
-const actualizarPrecio = () => { 
-precioProductos.innerHTML=`<h2>${totalPago}</h2>`
+const actualizarPrecio = () => {
+    precioProductos.innerHTML = `<h2>${totalPago}</h2>`
 }
 
-const actualizarProductos=()=>{
+const actualizarProductos = () => {
     let productosCarritoRecorrido = ""
     for (let i = 0; i < carrito.length; i++) {
-            productosCarritoRecorrido+=`${carrito[i]}`
+        productosCarritoRecorrido += `${carrito[i]}`
     }
-    productosDentroDelCarrito.innerHTML=`<h2>${productosCarritoRecorrido}</h2>`
+    productosDentroDelCarrito.innerHTML = `<h2>${productosCarritoRecorrido}</h2>`
 
 }
 const abrirModal = () => {
@@ -77,7 +79,7 @@ botonesPrecio.forEach((botonPrecio) =>
         totalPago += parseInt(botonPrecio.dataset.precio)
         articuloSeleccionado = botonPrecio.dataset.producto
         carrito.push(articuloSeleccionado)
-    
+
         acumularCarrito()
         eliminarActive()
     }
@@ -115,7 +117,7 @@ function carritoCompra() {
 //             vaciarCarrito()
 //         }
 //     }
- 
+
 // }
 const cambioDeImagen = (id) => {
     switch (id) {
@@ -190,6 +192,24 @@ const cambioDeImagen = (id) => {
             break;
         case "casco6":
             imagenMostrada8.setAttribute("src", `./images/${id}.png`)
+            break;
+        case "asiento1":
+            imagenMostrada9.setAttribute("src", `./images/${id}.png`)
+            break;
+        case "asiento2":
+            imagenMostrada9.setAttribute("src", `./images/${id}.png`)
+            break;
+        case "asiento3":
+            imagenMostrada9.setAttribute("src", `./images/${id}.png`)
+            break;
+        case "candado1":
+            imagenMostrada10.setAttribute("src", `./images/${id}.png`)
+            break;
+        case "candado2":
+            imagenMostrada10.setAttribute("src", `./images/${id}.png`)
+            break;
+        case "candado3":
+            imagenMostrada10.setAttribute("src", `./images/${id}.png`)
             break;
         default:
             break;

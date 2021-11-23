@@ -147,6 +147,46 @@ body{
     border: solid 1px red;
     color: white;
 }
+/*==================*/
+/*=====CARRITO======*/
+/*==================*/
+#carrito{
+background:none;
+color: white;
+font-size: 1.8em;
+border: none;  
+
+}
+#carritoAcumuladora{
+  color: #00fff9;
+
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+.modalCarrito{
+ width:50%;
+ height:auto;
+ margin: auto;
+ color: white;
+ background-image: url(./images/bg.png);
+ padding:30px;
+}
+.estiloCarrito{
+  font-size:3.5em;
+  text-decoration: none;
+}
 /*=========================*/
 /*=========CARDS===========*/
 /*=========================*/

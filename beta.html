@@ -36,21 +36,25 @@
         <div>
           <button onclick="cerrarModal()" id="botonCancelarModal">Cancelar</button>
           <button onclick="vaciarCarrito()" id="botonVaciarCarrito">Vaciar carrito</button>
-          <button id="botonCompra">Comprar</button>
+          <button onclick="carritoCompra()" id="botonCompra">Comprar</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="cards-title">
-    <h2>Productos</h2>
+
+  <div class="titulo-carrito">
+    <div class="cards-title">
+      <h2>Productos</h2>
+    </div>
+    <div class="estiloCarrito" onclick="carritoCompra()">
+      <button class="btnCarrito" id="carrito">
+        <ion-icon name="cart-outline"></ion-icon>
+      </button>
+      <p id="carritoAcumuladora"></p>
+    </div>
   </div>
-  <div class="estiloCarrito" onclick="carritoCompra()">
-    <button id="carrito">
-      <ion-icon name="cart-outline"></ion-icon>
-    </button>
-    <p id="carritoAcumuladora"></p>
-  </div>
+
   <section class="cards">
 
     <div class="card">

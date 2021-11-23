@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Zona 1</title>
+</head>
+<body>
+    <header class="header" id="Home">
+        <img src="./images/logo.png" class="img-logo">
+        <div class="btns menuToggle">
+            <ion-icon name="menu-outline"></ion-icon>
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+        <nav>
+            <ul class="navigation"> <!--LA ANTERIOR CLASS ERA nav__links-->
+                <li><a class="aHover" href="#">Home</a></li>
+                <li><a class="aHover2" href="#Quienes">About</a></li>
+                <li><a class="aHover3" href="#Shop">Shop</a></li>
+                <li><a class="cta" href="#contact"><button>Contact</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="textos">
+            <div class="texto-h2">
+                <h2>Loleros</h2>
+            </div>
+            <div class="texto-h1">
+                <h1>Bikers</h1>
+            </div>
+            <div class="paragraph-2">
+                <p class="parrafo-inicio">Para que caminar si podes rodar con estilo</p>
+            </div>
+        </div>
+        <div class="infinite">
+            <div class="girl"></div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+
+    <!-- AREA QUIENES SOMOS -->
+    <section class="section">
+        <div class="subtitulo" id="Quienes">
+            <h2>¿Quienes somos?</h2>
+        </div>
+        <div class="quienes-somos">
+            <p class="quienes-somos-parrafo">Bienvenidos a nuestra tienda de bicicletas en ella vas a encontrar los mejores productos y ofertas para poder rodar con estilo los 365 días del año..</p>
+        </div>
+        <div class="hr"><hr></div>
+        <div class="productos-title" id="Shop">
+            <h2>Productos</h2>
+        </div>
+        <div class="productos-contain">
+            <div class="card first">
+                <div class="cover"></div>
+                    <div id="paragraph" class="details">
+                        <img class="img" src="./images/Casco.png" alt="">
+                        <h2 class="product">Combo N° 1</h2>
+                        <div class="paragraph">
+                            <p>Disponible el 12/12/2021</p>
+                            <!-- <strike>$45000</strike>
+                            <b>$25.000</b> -->
+                        </div>
+                        <!-- <h2 class="product"><sup>$</sup>450</h2> -->
+                        <!-- <button class="botonCarrito"><strike>$45000</strike>
+                            <b>$25.000</b></button> -->
+                        <button class="precio botonCombo" data-precio="25000" data-producto="Combo1"><strike>$45.000</strike>
+                                <b>$25.000</b></button>
+                    </div>
+            </div>
+            <div class="card second">
+                <div class="cover"></div>
+                    <div id="paragraph" class="details">
+                        <img class="img" src="./images/combo2.png" alt="">
+                        <h2 class="product">Combo N° 2</h2>
+                        <div class="paragraph">
+                            <p>Disponible el 25/12/2021</p>
+                            <!-- <strike>$90.000</strike>
+                            <b>$65.000</b> -->
+                        </div>
+                        <!-- <h2 class="product"><sup>$</sup>450</h2> -->
+                        <!-- <button class="botonCarrito"><strike>$90.000</strike>
+                            <b>$65.000</b></button> -->
+                        <button class="precio botonCombo" data-precio="65000" data-producto="Combo2"><strike>$90.000</strike>
+                                <b>$65.000</b></button>
+                    </div>
+            </div>
+            <div class="card three">
+                <div class="cover"></div>
+                    <div id="paragraph" class="details">
+                        <img class="img" src="./images/combo_3.png" alt="">
+                        <h2 class="product">Combo N° 3</h2>
+                        <div class="paragraph">
+                            <p>Disponible el 22/01/2022</p>
+                            <!-- <strike>$160.000</strike>
+                            <b>$120.000</b> -->
+                        </div>
+                        <!-- <button class="botonCarrito"><strike>$160.000</strike>
+                            <b>$120.000</b></button> -->
+                        <button class="precio botonCombo" data-precio="120000" data-producto="Combo3"><strike>$160.000</strike>
+                                <b>$120.000</b></button>
+                    </div>
+            </div>
+        </div>
+        <!--BOTON CARRITO -->
+        <button id="carrito" onclick="carritoCompra()">Carrito</button>
+        <p id="carritoAcumuladora"></p>  
+    </section>
+
+    <div class="seccion-2">
+        <a class="boton-2" href="beta.html"><ion-icon name="arrow-forward-outline"></ion-icon></a>
+        <p>Ir a la segunda seccion</p>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+
+    <!-- SECCION CONTACTO -->
+        <div class="Contacto" id="contact">
+            <h1 class="text-left" style="color: #f3f3f3">Contactanos</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <form method="post" action="enviarcorreo.php">
+                        <ul class="contact-form">
+                            <li>
+                                <div class="col-md-6">
+                                    <input name="nombre" placeholder="Escribe tu nombre" required="required" size="8" type="text" />
+                                </div>
+    
+                                <div class="col-md-6">
+                                    <input name="email" placeholder="Email" required="required" size="8" type="email" />
+                                </div>
+                            </li>
+    
+                            <li>
+                                <div class="col-md-6">
+                                    <input name="telefono" placeholder="Escribe tu numero" required="required" size="8" type="text" />
+                                </div>
+    
+                                <div class="col-md-6">
+                                    <input name="compañia" placeholder="Companía/Agencia" required="required" size="8" type="text" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-md-12">
+                                    <input name="asunto" placeholder="Asunto" required="required" size="8" type="text" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-md-12">
+                                    <textarea class="span12" name="mensaje" placeholder="Escribe tu proyecto o mensaje" required="required"></textarea>
+                                </div>
+                            </li>
+    
+                            <li>
+                                <div class="col-md-12">
+                                    <button type="submit">
+                        Enviar mensaje
+                        <span
+                          class="glyphicon glyphicon-arrow-right"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Valoracion -->
+        
+        <div class="valoracion">
+            <div class="rating">
+                <input type="radio" name="star" id="star1" checked="checked">
+                <label for="star1">
+                    <img src="./images/sunglasses.png" alt="">
+                    <h4>Amo esto</h4>
+                </label>
+                <input type="radio" name="star" id="star2">
+                <label for="star2">
+                    <img src="./images/Like.png" alt="">
+                    <h4>Me gusta</h4>
+                </label>
+                <input type="radio" name="star" id="star3">
+                <label for="star3">
+                    <img src="./images/indifferent.png" alt="">
+                    <h4>Mmmm safa</h4>
+                </label>
+                <input type="radio" name="star" id="star4">
+                <label for="star4">
+                    <img src="./images/boring.png" alt="">
+                    <h4>No me gusto</h4>
+                </label>
+                <input type="radio" name="star" id="star5">
+                <label for="star5">
+                    <img src="./images/angry.png" alt="">
+                    <h4>Pesimo</h4>
+                </label>
+            </div>
+        </div>
+        
+        <div class="valoracion-text">
+            <h2>Dejanos tu valoracion</h2>
+        </div>
+
+        <!-- REDES -->
+        <div class="redes-text">
+            <h3>Seguinos en nuestras redes</h3>
+        </div>
+        <div class="redes">
+           <ion-icon name="logo-instagram" class="instagram"></ion-icon>
+            <ion-icon name="logo-twitter" class="twitter"></ion-icon>
+            <ion-icon name="logo-linkedin" class="linkedin"></ion-icon>
+            <div class="up">
+                <a href="#Home" class="up-boton"><ion-icon name="arrow-up-outline"></ion-icon></a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./scrollreveal.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./animation.css">
+    <title>Zona  2</title>
+</head>
+<body>
+    <div class="container-main" id="#seccion-2">
+        <!-- <div class="paragraph-title">
+            <p>Nosotros no conocemos las fronteras, adquiri nuestros productos donde quieras y cuando quieras</p>
+        </div> -->
+        <div class="planet planetEarth">
+            <div class="container-earth">
+                <!-- <div class="overlay"></div> -->
+                <div class="loader"><span></span></div>
+                <div class="earth"></div>
+            </div>
+        </div>
+    </div>
+    <!-- SECTOR CARDS -->
+   <div class="cards-title">
+        <h2>Productos</h2>
+    </div>
+    
+    <button id="carrito" onclick="carritoCompra()">Carrito</button>
+  <p id="carritoAcumuladora"></p>
+
+    <section class="cards">
+        
+        <div class="card">
+            <div class="imagen-mostrada">
+              <img src="./images/roja.png" class="imagenMostradaBici" alt="">
+            </div>
+            <div class="titulo">
+              <span>Niconeta</span>
+            </div>
+            <div class="colores">
+              <span class="roja coloresJs " id="roja"></span>
+              <span class="amarilla coloresJs" id="amarilla"></span>
+              <span class="verde coloresJs " id="verde"></span>
+            </div>
+            <div class="rodados-contenedor">
+              <div class="titulo">
+                <span>Rodados</span>
+              </div>
+              <div class="rodados">
+                <div class="rodado">
+                  <span>16</span>
+                </div>
+                <div class="rodado">
+                  <span>20</span>
+                </div>
+                <div class="rodado">
+                  <span>24</span>
+                </div>
+                <div class="rodado">
+                  <span>26</span>
+                </div>
+                <div class="rodado">
+                  <span>29</span>
+                </div>
+              </div>
+            </div>
+            <button class="precio" data-precio="40000" data-producto="Niconeta">
+              <strike>$50.000</strike>
+              <b>$40.000</b>
+            </button>
+          </div>
+        
+          <!-- Segunda Bicicleta -->
+          <div class="card">
+            <div class="imagen-mostrada">
+              <img src="./images/Naranja.png" class="imagenMostradaBici2" alt="">
+            </div>
+            <div class="titulo">
+              <span>Montañas</span>
+            </div>
+            <div class="colores2">
+              <span class="naranja coloresJs " id="naranja"></span>
+              <span class="blana coloresJs" id="blanca"></span>
+              <span class="celeste coloresJs " id="celeste"></span>
+            </div>
+            <div class="rodados-contenedor">
+              <div class="titulo">
+                <span>Rodados</span>
+              </div>
+              <div class="rodados">
+                <div class="rodado">
+                  <span>16</span>
+                </div>
+                <div class="rodado">
+                  <span>20</span>
+                </div>
+                <div class="rodado">
+                  <span>24</span>
+                </div>
+                <div class="rodado">
+                  <span>26</span>
+                </div>
+                <div class="rodado">
+                  <span>29</span>
+                </div>
+              </div>
+            </div>
+            <button class="precio" data-precio="45000" data-producto="Montañas">
+              <strike>$50.000</strike>
+              <b>$45.000</b>
+            </button>
+          </div>
+          <!-- Tercera Bicicleta -->
+          <div class="card">
+            <div class="imagen-mostrada">
+              <img src="./images/azul.png" class="imagenMostradaBici3" alt="">
+            </div>
+            <div class="titulo">
+              <span>La 4x4</span>
+            </div>
+            <div class="colores3">
+              <span class="azul coloresJs " id="azul"></span>
+              <span class="fluor coloresJs" id="fluor"></span>
+              <span class="gris coloresJs " id="gris"></span>
+            </div>
+            <div class="rodados-contenedor">
+              <div class="titulo">
+                <span>Rodados</span>
+              </div>
+              <div class="rodados">
+                <div class="rodado">
+                  <span>16</span>
+                </div>
+                <div class="rodado">
+                  <span>20</span>
+                </div>
+                <div class="rodado">
+                  <span>24</span>
+                </div>
+                <div class="rodado">
+                  <span>26</span>
+                </div>
+                <div class="rodado">
+                  <span>29</span>
+                </div>
+              </div>
+            </div>
+            <button class="precio" data-precio="65000" data-producto="La 4x4">
+              <strike>$35.000</strike>
+              <b>$65.000</b>
+            </button>
+        </div>
+        
+
+        <!-- ACA TERMINABA LA PRIMERA SECCION -->
+   
+
+    <!-- <section class="container-2"> -->
+        <div class="card">
+            <div class="imagen-mostrada">
+              <img src="./images/marron.png" class="imagenMostradaBici4" alt="">
+            </div>
+            <div class="titulo">
+              <span>Clasic</span>
+            </div>
+            <div class="colores4">
+              <span class="marron coloresJs " id="marron"></span>
+              <span class="cyan coloresJs" id="cyan"></span>
+              <span class="bordo coloresJs " id="bordo"></span>
+            </div>
+            <div class="rodados-contenedor">
+              <div class="titulo">
+                <span>Rodados</span>
+              </div>
+              <div class="rodados">
+                <div class="rodado">
+                  <span>16</span>
+                </div>
+                <div class="rodado">
+                  <span>20</span>
+                </div>
+                <div class="rodado">
+                  <span>24</span>
+                </div>
+                <div class="rodado">
+                  <span>26</span>
+                </div>
+                <div class="rodado">
+                  <span>29</span>
+                </div>
+              </div>
+            </div>
+            <button class="precio" data-precio="20000" data-producto="Clasic">
+              <strike>$30.000</strike>
+              <b>$20.000</b>
+            </button>
+           </div>
+          <!-- Quinta Bicicleta -->
+          <div class="card">
+            <div class="imagen-mostrada">
+              <img src="./images/amarillita.png" class="imagenMostradaBici5" alt="">
+            </div>
+            <div class="titulo">
+              <span>Kids</span>
+            </div>
+            <div class="colores5">
+              <span class="amarillita coloresJs " id="amarillita"></span>
+              <span class="grisesita coloresJs" id="grisesita"></span>
+              <span class="blanquita coloresJs " id="blanquita"></span>
+            </div>
+            <div class="rodados-contenedor">
+              <div class="titulo">
+                <span>Rodados</span>
+              </div>
+              <div class="rodados">
+                <div class="rodado">
+                  <span>4</span>
+                </div>
+                <div class="rodado">
+                  <span>6</span>
+                </div>
+                <div class="rodado">
+                  <span>8</span>
+                </div>
+                <div class="rodado">
+                  <span>10</span>
+                </div>
+                <div class="rodado">
+                  <span>12</span>
+                </div>
+              </div>
+            </div>
+            <button class="precio" data-precio="10000" data-producto="Kids">
+              <strike>$20.000</strike>
+              <b>$10.000</b>
+            </button>
+          </div>
+          <!-- sexta Bicicleta -->
+          <div class="card">
+            <div class="imagen-mostrada">
+              <img src="./images/negra.png" class="imagenMostradaBici6" alt="">
+            </div>
+            <div class="titulo">
+              <span>BMX</span>
+            </div>
+            <div class="colores6">
+              <span class="negra coloresJs " id="negra"></span>
+              <span class="rosa coloresJs" id="rosa"></span>
+              <span class="manzana coloresJs " id="manzana"></span>
+            </div>
+            <div class="rodados-contenedor">
+              <div class="titulo">
+                <span>Rodados</span>
+              </div>
+              <div class="rodados">
+                <div class="rodado">
+                  <span>16</span>
+                </div>
+                <div class="rodado">
+                  <span>20</span>
+                </div>
+                <div class="rodado">
+                  <span>24</span>
+                </div>
+                <div class="rodado">
+                  <span>26</span>
+                </div>
+                <div class="rodado">
+                  <span>29</span>
+                </div>
+              </div>
+              <button class="precio" data-precio="85000" data-producto="BMX">
+                <strike>$120.000</strike>
+                <b>$85.000</b>
+              </button>
+            </div>
+           
+          </div>
+
+          <!-- SEPTIMA BICI -->
+
+          <div class="card">
+            <div class="imagen-mostrada">
+              <img src="./images/casco1.png" class="imagenMostradaCasco cascos" alt="">
+            </div>
+            <div class="titulo">
+              <span>Casco</span>
+            </div>
+            <div class="colores7">
+              <span class="casco1 coloresJs " id="casco1"></span>
+              <span class="casco2 coloresJs" id="casco2"></span>
+              <span class="casco3 coloresJs " id="casco3"></span>
+            </div>
+            <div class="rodados-contenedor">
+              <div class="titulo">
+                <span>Tamaños</span>
+              </div>
+              <div class="rodados">
+                <div class="rodado">
+                  <span>SM</span>
+                </div>
+                <div class="rodado">
+                  <span>MD</span>
+                </div>
+                <div class="rodado">
+                  <span>L</span>
+                </div>
+                <div class="rodado">
+                  <span>XL</span>
+                </div>
+                <div class="rodado">
+                  <span>XXL</span>
+                </div>
+              </div>
+            </div>
+            <button class="precio" data-precio="5000" data-producto="Casco">
+              <strike>$10.000</strike>
+              <b>$5.000</b>
+            </button>
+          </div>
+
+          <!-- OCTAVA BICI -->
+
+          <div class="card">
+            <div class="imagen-mostrada ">
+              <img src="./images/casco4.png" class="imagenMostradaCasco2 cascos" alt="">
+            </div>
+            <div class="titulo">
+              <span>Cascos BMX</span>
+            </div>
+            <div class="colores8">
+              <span class="negra coloresJs " id="casco4"></span>
+              <span class="rosa coloresJs" id="casco5"></span>
+              <span class="manzana coloresJs " id="casco6"></span>
+            </div>
+            <div class="rodados-contenedor">
+              <div class="titulo">
+                <span>Tamaños</span>
+              </div>
+              <div class="rodados">
+                <div class="rodado">
+                  <span>SM</span>
+                </div>
+                <div class="rodado">
+                  <span>MD</span>
+                </div>
+                <div class="rodado">
+                  <span>L</span>
+                </div>
+                <div class="rodado">
+                  <span>X</span>
+                </div>
+                <div class="rodado">
+                  <span>XXL</span>
+                </div>
+              </div>
+            </div>
+            <button class="precio" data-precio="7000" data-producto="Cascos BMX">
+              <strike>$15.000</strike>
+              <b>$7.000</b>
+            </button>
+          </div>
+          </div>
+
+    </section>
+
+    <div class="seccion-1">
+      <a class="boton-2" href="index.html"><ion-icon name="arrow-back-outline"></ion-icon></a>
+      <p>Volver a la seccion principal</p>
+  </div>
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

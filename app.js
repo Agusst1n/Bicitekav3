@@ -12,11 +12,11 @@ const rodados = document.querySelectorAll(".rodado")
 const cards = document.querySelectorAll(".card")
 const modalCarrito = document.querySelector(".modalCarrito");
 const cancelarModal = document.querySelector(".botonCancelarModal")
-const precioProductos=document.querySelector(".precioProductos")
+const precioProductos=document.querySelector("#precioProductos")
 let id;
 let rodadoSelecionado;
 var totalPago = 0;
-const carrito = [];
+let carrito = [];
 let botonesPrecio = document.querySelectorAll(".precio")
 const articulos = ["Specialized", "Bici2", "Bici3", "Bici4", "Bici5"];
 const promociones = ["PromoBasica", "PromoBiciteka", "PromoPremiun"]
@@ -24,18 +24,30 @@ const valoresPromociones = [75000, 120000, 250000]
 let articuloSeleccionado;
 const carritoAcumuladora = document.querySelector("#carritoAcumuladora")
 const overlay = document.querySelector('#overlay');
+const productosDentroDelCarrito = document.querySelector('#productosDentroDelCarrito')
 let acumuladoraSeleccionado;
 var pagar;
 var cuenta1;
 var vuelto;
+
 const actualizarPrecio = () => { 
 precioProductos.innerHTML=`<h2>${totalPago}</h2>`
+}
+
+const actualizarProductos=()=>{
+    let productosCarritoRecorrido = ""
+    for (let i = 0; i < carrito.length; i++) {
+            productosCarritoRecorrido+=`${carrito[i]}`
+    }
+    productosDentroDelCarrito.innerHTML=`<h2>${productosCarritoRecorrido}</h2>`
+
 }
 const abrirModal = () => {
     overlay.classList.remove('hidden');
     //body.classList.add('no-scroll')
     modalCarrito.classList.remove('hidden');
     actualizarPrecio()
+    actualizarProductos()
 };
 
 const cerrarModal = () => {
@@ -57,7 +69,7 @@ rodados.forEach(rodado => {
 function acumularCarrito() {
     acumuladoraSeleccionado = carrito.length
     carritoAcumuladora.innerHTML = `<p>${acumuladoraSeleccionado}</p>`
-    console.log(acumuladoraSeleccionado)
+
 }
 
 botonesPrecio.forEach((botonPrecio) =>
@@ -65,7 +77,7 @@ botonesPrecio.forEach((botonPrecio) =>
         totalPago += parseInt(botonPrecio.dataset.precio)
         articuloSeleccionado = botonPrecio.dataset.producto
         carrito.push(articuloSeleccionado)
-        console.log(carrito)
+    
         acumularCarrito()
         eliminarActive()
     }
@@ -73,32 +85,38 @@ botonesPrecio.forEach((botonPrecio) =>
 function vaciarCarrito() {
     totalPago = 0
     carrito = [];
+    actualizarPrecio()
+    actualizarProductos()
 }
 
 function carritoCompra() {
     abrirModal();
-    if (totalPago === 0) {
-        alert("compra algo raton")
-    } else {
-        alert("Compraste estos articulos: " + "\n" + carrito + " tenes que pagar $ " + totalPago)
-        pagar = parseInt(prompt("¿Con cuento va pagar ?"))
-        if (pagar > totalPago) {
-            vuelto = pagar - totalPago;
-            alert("Muchas gracias por su compra ;)\n Su vuelto es $ " + vuelto)
-            vaciarCarrito()
-        }
-        else if (totalPago > pagar) {
-            cuenta1 = (totalPago - pagar);
-            alert("Te faltan $" + cuenta1)
-            carritoCompra()
-        }
-        else {
-            alert("Muchas gracias por su compra ;)")
-            vaciarCarrito()
-        }
-    }
-    console.log(carrito)
 }
+
+// function carritoCompra() {
+//     abrirModal();
+//     if (totalPago === 0) {
+//         alert("compra algo raton")
+//     } else {
+//         alert("Compraste estos articulos: " + "\n" + carrito + " tenes que pagar $ " + totalPago)
+//         pagar = parseInt(prompt("¿Con cuento va pagar ?"))
+//         if (pagar > totalPago) {
+//             vuelto = pagar - totalPago;
+//             alert("Muchas gracias por su compra ;)\n Su vuelto es $ " + vuelto)
+//             vaciarCarrito()
+//         }
+//         else if (totalPago > pagar) {
+//             cuenta1 = (totalPago - pagar);
+//             alert("Te faltan $" + cuenta1)
+//             carritoCompra()
+//         }
+//         else {
+//             alert("Muchas gracias por su compra ;)")
+//             vaciarCarrito()
+//         }
+//     }
+ 
+// }
 const cambioDeImagen = (id) => {
     switch (id) {
         case "roja":
@@ -195,13 +213,13 @@ colores.forEach(color => {
 
 //NAVBAR
 
-let menuToggle = document.querySelector('.menuToggle')
-let navigation = document.querySelector('.navigation')
+// let menuToggle = document.querySelector('.menuToggle')
+// let navigation = document.querySelector('.navigation')
 
-menuToggle.onclick = function () {
-    menuToggle.classList.toggle('active')
-    navigation.classList.toggle('active')
-}
+// menuToggle.onclick = function () {
+//     menuToggle.classList.toggle('active')
+//     navigation.classList.toggle('active')
+// }
 
 
 

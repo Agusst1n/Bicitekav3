@@ -12,10 +12,14 @@ const imagenMostrada10 = document.querySelector(".imagenMostradaCandado")
 const colores = document.querySelectorAll(".coloresJs");
 const rodados = document.querySelectorAll(".rodado")
 const cards = document.querySelectorAll(".card")
+const alertaModal = document.querySelector("#alertaModal")
 const modalCarrito = document.querySelector(".modalCarrito");
 const cancelarModal = document.querySelector(".botonCancelarModal")
 const precioProductos = document.querySelector("#precioProductos")
-const botonPrecio=document.querySelector(".botonCompra")
+const botonPrecio = document.querySelector(".botonCompra")
+const precioApagarUsuario = document.querySelector("#precioAPagarUsuario")
+const alertaFaltaDinero = document.querySelector("#alertaFaltaDinero")
+const alertaComprado = document.querySelector("#alertaComprado")
 let id;
 let rodadoSelecionado;
 var totalPago = 0;
@@ -25,7 +29,7 @@ const articulos = ["Specialized", "Bici2", "Bici3", "Bici4", "Bici5"];
 const promociones = ["PromoBasica", "PromoBiciteka", "PromoPremiun"]
 const valoresPromociones = [75000, 120000, 250000]
 let articuloSeleccionado;
-const carritoAcumuladora = document.querySelector("#carritoAcumuladora")
+const carritoAcumuladora = document.querySelector(".carritoAcumuladora")
 const overlay = document.querySelector('#overlay');
 const productosDentroDelCarrito = document.querySelector('#productosDentroDelCarrito')
 let acumuladoraSeleccionado;
@@ -34,18 +38,22 @@ var cuenta1;
 var vuelto;
 
 const actualizarPrecio = () => {
-    precioProductos.innerHTML = `<h2>${totalPago}</h2>`
+    precioProductos.innerHTML = totalPago
 }
 
 const actualizarProductos = () => {
     let productosCarritoRecorrido = ""
     for (let i = 0; i < carrito.length; i++) {
-        productosCarritoRecorrido += `${carrito[i]}`
+        productosCarritoRecorrido += carrito[i] + ", "
     }
-    productosDentroDelCarrito.innerHTML = `<h2>${productosCarritoRecorrido}</h2>`
+    productosCarritoRecorrido = carrito.join(' ,')
+    productosDentroDelCarrito.innerHTML = `<li>${productosCarritoRecorrido}</li>`
 
 }
 const abrirModal = () => {
+    alertaModal.classList.add('hidden');
+    alertaFaltaDinero.classList.add('hidden');
+    alertaComprado.classList.add('hidden');
     overlay.classList.remove('hidden');
     //body.classList.add('no-scroll')
     modalCarrito.classList.remove('hidden');
@@ -56,6 +64,8 @@ const abrirModal = () => {
 const cerrarModal = () => {
     overlay.classList.add('hidden');
     modalCarrito.classList.add('hidden');
+
+
 };
 
 const eliminarActive = () => {
@@ -80,7 +90,6 @@ botonesPrecio.forEach((botonPrecio) =>
         totalPago += parseInt(botonPrecio.dataset.precio)
         articuloSeleccionado = botonPrecio.dataset.producto
         carrito.push(articuloSeleccionado)
-
         acumularCarrito()
         eliminarActive()
     }
@@ -90,11 +99,36 @@ function vaciarCarrito() {
     carrito = [];
     actualizarPrecio()
     actualizarProductos()
+
+
 }
 
 function carritoCompra() {
     abrirModal();
 
+}
+
+
+const guardarValorInput = (valor) => {
+    pagar = valor
+    console.log(pagar)
+}
+function comprar() {
+    alertaModal.classList.add('hidden');
+    alertaFaltaDinero.classList.add('hidden');
+    alertaComprado.classList.add('hidden');
+    if (totalPago === 0) {
+        alertaModal.classList.remove('hidden');
+    } else {
+        if (pagar === undefined) {
+            alertaComprado.classList.remove('hidden')
+        } else if (pagar == totalPago) {
+            alertaComprado.classList.remove('hidden')
+
+        } else {
+            alertaFaltaDinero.classList.remove('hidden');
+        }
+    }
 }
 
 // function carritoCompra() {
@@ -224,24 +258,15 @@ colores.forEach(color => {
     })
 })
 
+// //NAVBAR
 
+// let menuToggle = document.querySelector('.menuToggle')
+// let navigation = document.querySelector('.navigation')
 
-
-
-
-
-
-
-
-//NAVBAR
-
-let menuToggle = document.querySelector('.menuToggle')
-let navigation = document.querySelector('.navigation')
-
-menuToggle.onclick = function () {
-    menuToggle.classList.toggle('active')
-    navigation.classList.toggle('active')
-}
+// menuToggle.onclick = function () {
+//     menuToggle.classList.toggle('active')
+//     navigation.classList.toggle('active')
+// }
 
 
 

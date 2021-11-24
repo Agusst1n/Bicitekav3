@@ -28,16 +28,25 @@
     <div class="modalCarrito hidden">
       <div class="dialogo" id="carritoAbierto">
         <h2>Carrito de compra</h2>
-        <div id="productosDentroDelCarrito">
+        <div class="seccionModal">
+          <ul id="productosDentroDelCarrito">
+
+          </ul>
+        </div class="seccionModal">
+        <h2>Total a pagar:</h2>
+        <div id="precioProductos" class="seccionModal">
+
         </div>
-        <div id="precioProductos">
-          
-        </div>
-        <div>
+        <h2 class="seccionModal">¿Cuánto pagará?</h2>
+        <input id="precioApagarUsuario" type="number"  onchange="guardarValorInput(this.value)">
+        <div class="seccionModal">
           <button onclick="cerrarModal()" class="botonesCarrito" id="botonCancelarModal">Cancelar</button>
           <button onclick="vaciarCarrito()" class="botonesCarrito" id="botonVaciarCarrito">Vaciar carrito</button>
-          <button onclick="carritoCompra()"class="botonesCarrito"  id="botonCompra">Comprar</button>
+          <button onclick="comprar()" class="botonesCarrito" id="botonComprar">Comprar</button>
         </div>
+        <div id="alertaModal">No se ha seleccionado ningún artículo</div>
+        <div id="alertaFaltaDinero">No es la cantidad de dinero correcta, inténtelo de nuevo</div>
+        <div id="alertaComprado">🚲 Gracias por su compra 🚲</div>
       </div>
     </div>
   </div>
@@ -51,7 +60,7 @@
       <button class="btnCarrito" id="carrito">
         <ion-icon name="cart-outline"></ion-icon>
       </button>
-      <p id="carritoAcumuladora"></p>
+      <div class="carritoAcumuladora"></div>
     </div>
   </div>
 
@@ -345,7 +354,7 @@
         <b>$5.000</b>
       </button>
     </div>
-<div class="card">
+    <div class="card">
       <div class="imagen-mostrada ">
         <img src="./images/casco4.png" class="imagenMostradaCasco2 cascos" alt="">
       </div>
@@ -414,7 +423,7 @@
           <div class="rodado">
             <span>10</span>
           </div>
-          </div>
+        </div>
       </div>
       <button class="precio" data-precio="3000" data-producto="Asiento">
         <strike>$5.000</strike>

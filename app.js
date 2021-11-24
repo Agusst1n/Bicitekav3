@@ -92,6 +92,8 @@ botonesPrecio.forEach((botonPrecio) =>
         carrito.push(articuloSeleccionado)
         acumularCarrito()
         eliminarActive()
+    carritoAcumuladora.classList.remove('hidden')
+
     }
 );
 function vaciarCarrito() {
@@ -99,8 +101,11 @@ function vaciarCarrito() {
     carrito = [];
     actualizarPrecio()
     actualizarProductos()
-
-
+    alertaModal.classList.add('hidden');
+    alertaFaltaDinero.classList.add('hidden');
+    alertaComprado.classList.add('hidden');
+    overlay.classList.remove('hidden');
+    carritoAcumuladora.classList.add('hidden')
 }
 
 function carritoCompra() {
@@ -121,9 +126,10 @@ function comprar() {
         alertaModal.classList.remove('hidden');
     } else {
         if (pagar === undefined) {
-            alertaComprado.classList.remove('hidden')
+            alertaFaltaDinero.classList.remove('hidden');
         } else if (pagar == totalPago) {
             alertaComprado.classList.remove('hidden')
+            carritoAcumuladora.classList.add('hidden')
 
         } else {
             alertaFaltaDinero.classList.remove('hidden');

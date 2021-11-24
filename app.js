@@ -15,6 +15,7 @@ const cards = document.querySelectorAll(".card")
 const modalCarrito = document.querySelector(".modalCarrito");
 const cancelarModal = document.querySelector(".botonCancelarModal")
 const precioProductos = document.querySelector("#precioProductos")
+const botonPrecio=document.querySelector(".botonCompra")
 let id;
 let rodadoSelecionado;
 var totalPago = 0;
@@ -93,6 +94,7 @@ function vaciarCarrito() {
 
 function carritoCompra() {
     abrirModal();
+
 }
 
 // function carritoCompra() {

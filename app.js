@@ -43,9 +43,6 @@ const actualizarPrecio = () => {
 
 const actualizarProductos = () => {
     let productosCarritoRecorrido = ""
-    for (let i = 0; i < carrito.length; i++) {
-        productosCarritoRecorrido += carrito[i] + ", "
-    }
     productosCarritoRecorrido = carrito.join(' ,')
     productosDentroDelCarrito.innerHTML = `<li>${productosCarritoRecorrido}</li>`
 

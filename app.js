@@ -273,3 +273,11 @@ menuToggle.onclick = function () {
 
 
 
+function contacto(){
+    Swal.fire({
+        icon: 'success',
+        title: 'Genial',
+        text: 'su mensaje fue enviado exitosamente',
+        // footer: '<a href="">Why do I have this issue?</a>'
+      })
+}

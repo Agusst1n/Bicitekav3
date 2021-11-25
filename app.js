@@ -261,15 +261,15 @@ colores.forEach(color => {
     })
 })
 
-// //NAVBAR
+//NAVBAR
 
-// let menuToggle = document.querySelector('.menuToggle')
-// let navigation = document.querySelector('.navigation')
+let menuToggle = document.querySelector('.menuToggle')
+let navigation = document.querySelector('.navigation')
 
-// menuToggle.onclick = function () {
-//     menuToggle.classList.toggle('active')
-//     navigation.classList.toggle('active')
-// }
+menuToggle.onclick = function () {
+    menuToggle.classList.toggle('active')
+    navigation.classList.toggle('active')
+}
 
 
 

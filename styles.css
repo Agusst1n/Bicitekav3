@@ -338,7 +338,7 @@ button{
     align-items: center;
     font-size: 1.7em;
     height: 60px;
-    width: 60px;
+    width: 50px;
     border: solid 1px rgb(63, 4, 4);
     background-color: rgba(0, 136, 169, 1);
     border-radius: 50%;
@@ -506,7 +506,6 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px red;
     margin-top: 220px;
 }
 
@@ -670,12 +669,13 @@ button{
     color: white;
 
 }
+
 .btns .menuToggle ion-icon{
     font-size: 3em;
 }
 .btns ion-icon{
     font-size: 1.5em;
-    color: var(--back);
+    color: white;
 }
 .btns ion-icon:nth-child(2){
     display: none;
